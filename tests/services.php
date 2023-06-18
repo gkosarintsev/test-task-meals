@@ -13,6 +13,8 @@ return function(ContainerConfigurator $configurator) {
         ->autoconfigure()
     ;
 
-    $services->load('Meals\\Application\\', '../src/Application/*');
+    $services->load('Meals\\Application\\Feature\\', '../src/Application/Feature/*');
+    $services->load('Meals\\Application\\Component\\Provider\\', '../src/Application/Component/Provider/*');
+    $services->load('Meals\\Application\\Component\\Validator\\', '../src/Application/Component/Validator/*');
     $services->load('tests\\Meals\\Functional\\Fake\\', '../tests/Functional/Fake/*');
 };
